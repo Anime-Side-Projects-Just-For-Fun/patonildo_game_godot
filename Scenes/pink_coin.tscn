@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bka8103amc815"]
+
+[ext_resource type="Texture2D" uid="uid://bx70rqs5svgct" path="res://Art Assets/Tiles/pink_coin.png" id="1_04450"]
+[ext_resource type="Script" path="res://Scripts/pink_coin.gd" id="1_lsw8b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mp1xj"]
+radius = 8.0
+height = 18.0
+
+[node name="PinkCoin" type="Area2D"]
+script = ExtResource("1_lsw8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mp1xj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_04450")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
