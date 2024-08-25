@@ -13,7 +13,7 @@ script = ExtResource("1_lsw8b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_mp1xj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["PinkCoins"]]
 texture = ExtResource("1_04450")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
