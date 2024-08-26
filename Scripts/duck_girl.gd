@@ -19,6 +19,9 @@ func _process(delta: float) -> void:
 		$Sprite2D.flip_h = true
 	else:
 		velocity.x = 0
+		
+	if Input.is_physical_key_pressed(KEY_P):
+		print('Game paused!')
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
